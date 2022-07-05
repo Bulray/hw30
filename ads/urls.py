@@ -20,5 +20,4 @@ urlpatterns = [
     path('selection/create/', views.SelectionCreateView.as_view()),
     path('selection/<int:pk>/update/', views.SelectionUpdateView.as_view()),
     path('selection/<int:pk>/delete/', views.SelectionDeleteView.as_view()),
-    # path('selection/<int:pk>/upload_image/', views.AdUploadImageView.as_view()),
 ]

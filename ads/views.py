@@ -225,29 +225,6 @@ class AdUpdateView(UpdateAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdDetailSerializer
 
-    # def patch(self, request, *args, **kwargs):
-    #     super().post(request, *args, **kwargs)
-    #
-    #     ad_data = json.loads(request.body)
-    #     self.object.name = ad_data["name"]
-    #     self.object.price = ad_data["price"]
-    #     self.object.description = ad_data["description"]
-    #
-    #     self.object.author = get_object_or_404(User, ad_data["author_id"])
-    #     self.object.category = get_object_or_404(Category, ad_data["category_id"])
-    #
-    #     self.object.save()
-    #     return JsonResponse({
-    #         "id": self.object.id,
-    #         "name": self.object.name,
-    #         "author_id": self.object.author_id,
-    #         "author": self.object.author.first_name,
-    #         "price": self.object.price,
-    #         "description": self.object.description,
-    #         "is_published": self.object.is_published,
-    #         "category_id": self.object.category_id,
-    #         "image": self.object.image.url if self.object.image else None,
-    #     })
 
 
 @method_decorator(csrf_exempt, name='dispatch')
